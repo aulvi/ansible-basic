@@ -1,0 +1,7 @@
+- name: "Basic configuration"
+  hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: apply patches
+      apt: upgrade=dist update_cache=yes
